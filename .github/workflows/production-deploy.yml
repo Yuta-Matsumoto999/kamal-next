@@ -1,0 +1,35 @@
+name: production-deploy
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+
+      - name: setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+          bundler-cache: true
+      
+      - name: install kamal
+        run: gem install kamal
+
+      - name: Create secrets file
+        run: echo "${{ secrets.KAMAL_REGISTRY_PASSWORD }}" > .kamal/secrets-common
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: deploy
+        run: kamal deploy
