@@ -7,7 +7,7 @@ image: CONTAINER_IMAGE
 # Deploy to these servers.
 servers:
   web:
-    - SERVER_ADDRESS
+    - 160.251.234.214
   # job:
   #   hosts:
   #     - 192.168.0.1
