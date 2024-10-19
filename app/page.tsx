@@ -21,6 +21,7 @@ export default function Home() {
           <li>Update test!!!</li>
           <li>Deploy production test!!!</li>
           <li>Deploy staging only test🤟</li>
+          <li>Deploy production only test🤙</li>
         </ol>
 
         <div className={styles.ctas}>
