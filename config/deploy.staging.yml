@@ -2,7 +2,7 @@
 service: kamal-next
 
 # Name of the container image.
-image: doma2mo10/kamal-next:staging
+image: doma2mo10/kamal-next
 
 # Deploy to these servers.
 servers:
