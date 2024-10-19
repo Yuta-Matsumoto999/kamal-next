@@ -20,7 +20,7 @@ export default function Home() {
           <li>Save and see your changes instantly.</li>
           <li>Update test!!!</li>
           <li>Deploy production test!!!</li>
-          <li>Deploy staging only test👋</li>
+          <li>Deploy staging only test🤟</li>
         </ol>
 
         <div className={styles.ctas}>
