@@ -1,0 +1,10 @@
+app:
+  staging:
+    hosts:
+      - stg.ksxqew.com
+    image: doma2mo10/kamal-next:staging
+
+  production:
+    hosts:
+      - ksxqew.com
+    image: doma2mo10/kamal-next:latest

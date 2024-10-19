@@ -7,7 +7,7 @@ image: doma2mo10/kamal-next
 # Deploy to these servers.
 servers:
   web:
-    - stg.ksxqew.com
+    - 160.251.234.214
   # job:
   #   hosts:
   #     - 192.168.0.1
