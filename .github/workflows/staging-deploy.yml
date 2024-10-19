@@ -32,4 +32,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: deploy
-        run: kamal deploy -host stg.ksxqew.com
+        run: kamal deploy -d staging
