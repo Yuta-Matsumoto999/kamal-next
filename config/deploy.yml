@@ -7,7 +7,7 @@ image: doma2mo10/kamal-next
 # Deploy to these servers.
 servers:
   web:
-    - 160.251.234.214
+    - stg.ksxqew.com
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -18,7 +18,7 @@ servers:
 # in Cloudflare's SSL/TLS setting to "Full" to enable end-to-end encryption. 
 proxy: 
   ssl: true
-  hosts: 
+  hosts:
     - ksxqew.com
     - stg.ksxqew.com
   # kamal-proxy connects to your container over port 80, use `app_port` to specify a different port.

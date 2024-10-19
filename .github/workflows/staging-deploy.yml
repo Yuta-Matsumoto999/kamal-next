@@ -1,14 +1,14 @@
-name: production-deploy
+name: staging-deploy
 
 on:
   push:
     branches:
-      - "main"
+      - "Dev"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production
+    environment: staging
 
     steps:
       - name: checkout code
@@ -32,4 +32,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: deploy
-        run: kamal deploy --hosts ksxqew.com
+        run: kamal deploy -host stg.ksxqew.com
