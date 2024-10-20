@@ -3,7 +3,7 @@ name: staging-deploy
 on:
   push:
     branches:
-      - "Dev"
+      - main
 
 jobs:
   deploy:
@@ -24,7 +24,11 @@ jobs:
         run: gem install kamal
 
       - name: Create secrets file
-        run: echo "KAMAL_REGISTRY_PASSWORD=${{ secrets.KAMAL_REGISTRY_PASSWORD }}" > .kamal/secrets-common
+        run: |
+          echo "KAMAL_REGISTRY_PASSWORD=${{ secrets.KAMAL_REGISTRY_PASSWORD }}" > .kamal/secrets-common
+          echo "BASIC_AUTH_DISABLED=${{ secrets.BASIC_AUTH_DISABLED }}" >> .kamal/secrets-common
+          echo "BASIC_AUTH_USER=${{ secrets.BASIC_AUTH_USER }}" >> .kamal/secrets-common
+          echo "BASIC_AUTH_PASSWORD=${{ secrets.BASIC_AUTH_PASSWORD }}" >> .kamal/secrets-common
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.7.0

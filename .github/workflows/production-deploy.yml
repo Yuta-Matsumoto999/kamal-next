@@ -1,9 +1,12 @@
 name: production-deploy
 
 on:
-  push:
-    branches:
-      - "main"
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+concurrency: deploy-production # 多重起動時は新しいものが保留
 
 jobs:
   deploy:
