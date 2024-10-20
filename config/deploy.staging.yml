@@ -15,3 +15,9 @@ proxy:
 builder:
   arch: amd64
   dockerfile: ./docker/staging/Dockerfile
+
+env:
+  secret:
+    - BASIC_AUTH_DISABLED
+    - BASIC_AUTH_USER
+    - BASIC_AUTH_PASSWORD
