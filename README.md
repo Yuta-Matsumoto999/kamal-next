@@ -26,7 +26,7 @@ kamal2を利用して、VPS上にNext.jsをホスティングするためのテ�
 
 詳しい内容については、下記を参照ください。
 
-※ 記事を作成中です...。
+[https://zenn.dev/yuta_matsu999/books/bf6728297e5a8b](https://zenn.dev/yuta_matsu999/books/bf6728297e5a8b)
 
 ## 使い方
 
